@@ -10,7 +10,6 @@ end
 ruby '2.4.0'
 gem 'rails', '~> 5.0.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -52,3 +51,42 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'administrate'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bourbon'
+gem 'devise'
+gem 'devise-i18n'
+gem 'pundit'
+
+group :development do
+  gem 'better_errors'
+  gem 'foreman'
+  gem 'hub', :require=>nil
+  gem 'rails_apps_pages'
+  gem 'rails_apps_testing'
+  gem 'rails_layout'
+  gem 'spring-commands-rspec'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
+
